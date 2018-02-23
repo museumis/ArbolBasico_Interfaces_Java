@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 
@@ -23,6 +24,7 @@ public class FramePrincipal {
 		// RAIZ Y ARBOL
 		raiz = new DefaultMutableTreeNode("Telefonos");
 		JTree arbol = new JTree(raiz);
+		
 		// -------------------------------------------------------------------
 		// AMIGOS - Nodo 1, hijo raiz
 		categoria = new DefaultMutableTreeNode("Amigos");
@@ -45,6 +47,8 @@ public class FramePrincipal {
 		letra.add(nombre);
 		nombre = new DefaultMutableTreeNode("Fin 2");
 		letra.add(nombre);
+		
+		
 		// -------------------------------------------------------------------
 		// AMIGOS - Nodo 1, hijo raiz
 		categoria = new DefaultMutableTreeNode("Clientes");
@@ -67,7 +71,7 @@ public class FramePrincipal {
 		letra.add(nombre);
 		// ------------------------------------------------
 		// ANADIR ARBOL
-		frame.add(arbol);
+		frame.add(new JScrollPane(arbol));
 	}
 
 	public void iniciarListened() {
